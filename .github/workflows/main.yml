@@ -44,4 +44,5 @@ jobs:
           export HTTPS_PROXY="socks5h://$PROXY_HOST:$PROXY_PORT"
           
           # Execute your Python code
-          python find_temp_mail.py
+          python find_temp_mail_blanklist.py
+
