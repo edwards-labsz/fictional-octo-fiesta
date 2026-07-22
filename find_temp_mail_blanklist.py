@@ -177,7 +177,7 @@ def upload_level():
         "objects":        555,
         "coins":          0,
         "requestedStars": 1,
-        "unlisted":       1,
+        "unlisted":       0,
         "ldm":            0,
         "levelString":    LEVEL_STRING,
         "seed2":          seed2,
