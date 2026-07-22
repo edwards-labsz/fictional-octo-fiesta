@@ -30,7 +30,7 @@ SONG_ID_2    = 1          # secondary custom song ID (0 = none)
 SFX_IDS      = "5853,14061"  # comma-separated SFX IDs
 # ─────────────────────────────────────────────────────────────
 
-GD_URL = "https://www.boomlings.com/database/uploadGJLevel21.php"
+GD_URL = "http://www.boomlings.com/database/uploadGJLevel21.php"
 
 # A minimal valid GD 2.2 platformer level
 LEVEL_STRING = (
@@ -170,11 +170,11 @@ def upload_level():
         "levelLength":    5,        # Platformer
         "audioTrack":     0,        # 0 = custom song
         "auto":           0,
-        "password":       0,
-        "original":       0,
+        "password":       1,
+        "original":       145282824,
         "twoPlayer":      0,
         "songID":         SONG_ID,
-        "objects":        1,
+        "objects":        555,
         "coins":          0,
         "requestedStars": 1,
         "unlisted":       1,
