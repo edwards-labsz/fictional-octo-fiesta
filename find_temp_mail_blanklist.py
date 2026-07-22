@@ -27,9 +27,10 @@ TITLE_MODE   = "full"
 
 SONG_ID      = 599842     # primary custom song ID
 SONG_ID_2    = 1          # secondary custom song ID (0 = none)
+SFX_IDS      = "5853,14061"  # comma-separated SFX IDs
 # ─────────────────────────────────────────────────────────────
 
-GD_URL = "http://www.boomlings.com/database/uploadGJLevel21.php"
+GD_URL = "https://www.boomlings.com/database/uploadGJLevel21.php"
 
 # A minimal valid GD 2.2 platformer level
 LEVEL_STRING = (
@@ -169,14 +170,14 @@ def upload_level():
         "levelLength":    5,        # Platformer
         "audioTrack":     0,        # 0 = custom song
         "auto":           0,
-        "password":       1,
-        "original":       145282824,
+        "password":       0,
+        "original":       0,
         "twoPlayer":      0,
         "songID":         SONG_ID,
-        "objects":        555,
+        "objects":        1,
         "coins":          0,
         "requestedStars": 1,
-        "unlisted":       0,
+        "unlisted":       1,
         "ldm":            0,
         "levelString":    LEVEL_STRING,
         "seed2":          seed2,
@@ -185,10 +186,10 @@ def upload_level():
         "wt2":            0,
     }
 
-    # Add second song only if set
+    # Always send SFX; add second song only if set
+    data["sfxIDs"] = SFX_IDS
     if SONG_ID_2:
         data["songIDs"] = f"{SONG_ID},{SONG_ID_2}"
-        data["sfxIDs"]  = ""
 
     headers = {"User-Agent": ""}
 
